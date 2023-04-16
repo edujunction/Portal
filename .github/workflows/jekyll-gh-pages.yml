@@ -50,10 +50,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         
-- name: Download a Build Artifact
-  uses: actions/download-artifact@v2.1.1
-  with:
-    # Artifact name
-    name: Portal
-    # Destination path
-    path: https://drive.google.com/drive/folders/1_9J4udWCDUdG8DGsKcKuLhB_AtAgqoJN?usp=share_link
