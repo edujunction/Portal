@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  workflow_dispatch: https://drive.google.com/drive/folders/1_9J4udWCDUdG8DGsKcKuLhB_AtAgqoJN?usp=share_link
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -49,3 +49,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        
+- name: Download a Build Artifact
+  uses: actions/download-artifact@v2.1.1
+  with:
+    # Artifact name
+    name: Portal
+    # Destination path
+    path: https://drive.google.com/drive/folders/1_9J4udWCDUdG8DGsKcKuLhB_AtAgqoJN?usp=share_link
